@@ -100,7 +100,7 @@ cd Spring-Auth-Server-MS
 
 Configure Database:
 Update application.properties:
-
+```
 spring.application.name=${AS_NAME:authserver}
 
 server.port= ${AS_SERVER_PORT:9000}
@@ -113,24 +113,30 @@ spring.jpa.show-sql=${JPA_SHOW_SQL:true}
 spring.jpa.properties.hibernate.format_sql=${HIBERNATE_FORMAT_SQL:true}
 
 logging.pattern.console = ${LOGPATTERN_CONSOLE:%green(%d{HH:mm:ss.SSS}) %blue(%-5level) %red([%thread]) %yellow(%logger{15}) - %msg%n}
+```
 
 Run the Application:
+```
 mvn spring-boot:run
-
+```
 
 Authorization Server will be available at:
 http://localhost:9000
 
 📚 API Endpoints
 Endpoint	Method	Description
+```
 /oauth2/authorize	GET	Authorization endpoint
 /oauth2/token	POST	Token endpoint
 /oauth2/introspect	POST	Token introspection for opaque tokens
 /oauth2/revoke	POST	Revoke access or refresh tokens
 /userinfo	GET	User information endpoint (OIDC)
+````
 
 🔑 OAuth 2.1 Flows Supported
+```
 Client Credentials (Service-to-Service)
 Authorization Code with PKCE (Public Clients)
 Refresh Token (Silent Re-authentication)
 Opaque Tokens (Token Introspection)
+```
