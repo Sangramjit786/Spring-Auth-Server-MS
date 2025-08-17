@@ -97,8 +97,9 @@ scopes: openid, profile, email
 ```bash
 git clone https://github.com/Sangramjit786/Spring-Auth-Server-MS.git
 cd Spring-Auth-Server-MS
+```
 
-Configure Database:
+### Configure Database:
 Update application.properties:
 ```
 spring.application.name=${AS_NAME:authserver}
@@ -115,15 +116,15 @@ spring.jpa.properties.hibernate.format_sql=${HIBERNATE_FORMAT_SQL:true}
 logging.pattern.console = ${LOGPATTERN_CONSOLE:%green(%d{HH:mm:ss.SSS}) %blue(%-5level) %red([%thread]) %yellow(%logger{15}) - %msg%n}
 ```
 
-Run the Application:
+## Run the Application:
 ```
 mvn spring-boot:run
 ```
 
-Authorization Server will be available at:
+## Authorization Server will be available at:
 http://localhost:9000
 
-📚 API Endpoints
+## 📚 API Endpoints
 Endpoint	Method	Description
 ```
 /oauth2/authorize	GET	Authorization endpoint
@@ -133,7 +134,7 @@ Endpoint	Method	Description
 /userinfo	GET	User information endpoint (OIDC)
 ````
 
-🔑 OAuth 2.1 Flows Supported
+## 🔑 OAuth 2.1 Flows Supported
 ```
 Client Credentials (Service-to-Service)
 Authorization Code with PKCE (Public Clients)
